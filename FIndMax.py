@@ -15,10 +15,10 @@ for i in range(3, 20000):
 	var2 = collum+str(i+1)
 	varx = xcollum+str(i)
 	var0 = collum+str(i-1)
-	first = sheet_ranges[var1].value
+	first = int(sheet_ranges[var1].value)
 	xfirst = sheet_ranges[varx].value
-	second = sheet_ranges[var2].value
-	last = sheet_ranges[var0].value
+	second = int(sheet_ranges[var2].value)
+	last = int(sheet_ranges[var0].value)
 	#TODO: Make sure that the max and the min actually work
 	if((first < second) & (first > last)):
 		xdata.append(xfirst)
