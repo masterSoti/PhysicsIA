@@ -19,6 +19,7 @@ for i in range(3, 20000):
 	xfirst = sheet_ranges[varx].value
 	second = sheet_ranges[var2].value
 	last = sheet_ranges[var0].value
+	#TODO: Make sure that the max and the min actually work
 	if((first < second) & (first > last)):
 		xdata.append(xfirst)
 		ydata.append(first)
