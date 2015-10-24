@@ -1,3 +1,4 @@
+import ast
 import matplotlib.pyplot as plt
 import numpy as np
 from openpyxl import load_workbook
@@ -15,11 +16,11 @@ for i in range(3, 20000):
 	var2 = collum+str(i+1)
 	varx = xcollum+str(i)
 	var0 = collum+str(i-1)
-	first = int(sheet_ranges[var1].value)
+	first = (sheet_ranges[var1].value)
 	xfirst = sheet_ranges[varx].value
-	second = int(sheet_ranges[var2].value)
-	last = int(sheet_ranges[var0].value)
-	#TODO: Make sure that the max and the min actually work
+	second = (sheet_ranges[var2].value)
+	last = (sheet_ranges[var0].value)
+	#TODO: Make sure that the max and the min actually work-- seems like the problem is the casting
 	if((first < second) & (first > last)):
 		xdata.append(xfirst)
 		ydata.append(first)
