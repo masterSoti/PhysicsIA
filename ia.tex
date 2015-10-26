@@ -13,7 +13,7 @@
 
 \subsection*{Background and Personal Engagement}
 % make this better
-\indent I have always had a strong interest in Pendulums and Springs so I decided to combine these factors in the only way I knew how. I derived an equation for how the different K value of a spring will affect the damping constant of the pendulums, then I tested the my equation by attaching a spring to a pendulums and observing the forces through a sensor. 
+\indent I have always had a strong interest in Pendulums and Springs so I decided to combine these factors in the only way I knew how. I derived an equation for how the different K value of a spring will affect the damping constant of the pendulums, then I tested the my equation by attaching a spring to a pendulums and observing the forces through a sensor. The force was measure even if the data wanted was the period because the force is unique for each and every position. With the force, deriving our position becomes entirely possible. With the position, extracting the damping constant for each measurement also will be done.
 
 \subsection*{Methodology}
 \begin{enumerate}
@@ -43,15 +43,24 @@
 \subsection*{Diagrams}
 %attach a picture there
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{diagram}
+\includegraphics[width=\textwidth]{diagram.png}
 \caption{This is a diagram of what the setup looked like}
 \end{figure}
-\begin{figure}[h]
-\caption{The diagram of the setup with the forces labled}
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{equation_labels.png}
+\caption{The diagram of the setup with the forces and different measurements labled}
 \end{figure}
-\subsection*{Equation Derivation}
+\subsection*{Equation Derivations}
 %equation derivation here
-
+\indent According to Figure Two, by using the conservation of energy, some basic trigonometry and some basic assumptions, we are able to derive the equation
+\begin{equation}
+cos(\theta) \, = \,\frac{mv^2 + kx^2}{2gm(l_2 - l_1)}
+\end{equation}
+where m is the mass, v is the velocity, k is the spring constant, x is the length of the pendulum at any given force, g is the constant for the acceleration of gravity on Earth, and $l_2$, $l_1$ and theta are labled in Figure two. Equation one was the result of shifting the variables a bit of
+\begin{equation}
+gml_2cos(\theta) \, = \, \frac{1}{2}mv^2 + \frac{1}{2}kx^2 +gml_1cos(\theta)
+\end{equation}
+Using $F_{spring} \, = \, kx$ and $F_{net} \, = \, ma \, = \, F_{spring}tan(\theta)$, the value of acceleration at any time becomes possible to find. By integrating the acceleration, the velocity may be found. Every other variable in the equation was measured before the data was collected. With equation one, it is possible to collect the theta for every $F_{spring}$, and the maximums of theta will be fitted to the equation $\theta = e^{\frac{-b}{2m}t}$. The value of b will then be mapped out with the value of K to see if there are any relationships.
 \subsection*{Graphs}
 %need graphs from raw data
 %need graphs from the maximums
