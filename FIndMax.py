@@ -1,14 +1,13 @@
-import ast
 import matplotlib.pyplot as plt
 import numpy as np
 from openpyxl import load_workbook
 
-print "THis script runs"
+print "This script runs"
 wb = load_workbook(filename="Spring.xlsx")
 sheet_ranges = wb['Sheet1']
 f = open('max_run_four.txt', 'w')
-xdata = []
-ydata = []
+xdata = [][]
+ydata = [][]
 for i in range(3, 20000):
 	collum = 'K'
 	xcollum = 'J'
@@ -21,7 +20,8 @@ for i in range(3, 20000):
 	second = (sheet_ranges[var2].value)
 	last = (sheet_ranges[var0].value)
 	#TODO: Make sure that the max and the min actually work-- seems like the problem is the casting
-	if((first < second) & (first > last)):
+	#TODO: The problem could also be that the points zig zag as the time goes on... I can not tell
+	if((first > second) and (first > last)):
 		xdata.append(xfirst)
 		ydata.append(first)
 		#s = str(sheet_ranges[varx].value) + ",\t" + str(sheet_ranges[var1].value)+",\n"
